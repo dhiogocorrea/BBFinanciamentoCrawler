@@ -14,6 +14,14 @@ public class Application {
     private static final String REQUEST_URL = "https://www8.bb.com.br/simulador/formGeral.sml";
 
     public static void main(String[] args) throws IOException {
+        String valorBase = args[0];
+        String prazoFinan = args[1];
+        
+        String prazoCarencia = "0";
+        
+        if (args.length > 2) {
+            prazoCarencia = args[2];
+        }
         System.setProperty("javax.net.ssl.trustStore", "C:\\Users\\Dhiogo\\certificadobb.jks");
 
         Map<String, String> headers = new HashMap<>();
@@ -37,8 +45,8 @@ public class Application {
         data.put("flagPF", "");
         data.put("codigoLinhaCredito", "61");
         data.put("flagSN", "true");
-        data.put("valorBase", "140.000,00");
-        data.put("prazoFinanciamento", "72");
+        data.put("valorBase", valorBase);
+        data.put("prazoFinanciamento", prazoFinan);
         data.put("prazoCarencia", "0");
         data.put("fundoAval", "2");
         data.put("formaPgtoFundoAval", "1");
