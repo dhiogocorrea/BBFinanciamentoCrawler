@@ -10,7 +10,6 @@ import org.jsoup.select.Elements;
 
 public class Application {
 
-    private static final String URL = "https://www8.bb.com.br/simulador/formGeral.sml?opcao=detalharLinhaCreditoFinanciamentoCarencia&codigoLinhaCredito=61&_ga=1.255390222.789894944.1455888339";
     private static final String REQUEST_URL = "https://www8.bb.com.br/simulador/formGeral.sml";
 
     public static void main(String[] args) throws IOException {
